@@ -1,0 +1,79 @@
+
+.row1{
+    height: 400px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container {
+    display: block;
+    margin: auto;
+    
+}
+.form{
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,h3{
+    color: white;
+    font-family: Courier;
+    font-weight: bold;
+    mix-blend-mode: difference;
+}
+h4{
+    color: white;
+    font-family: Courier;
+    mix-blend-mode: difference;
+}
+
+/* input style*/
+.input{
+    padding-bottom: 10px;
+}
+input{
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+}
+input[type=text]:focus,[type="password"]:focus {
+    width: 350px;
+}
+input[type="text"],[type="password"]
+{   
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: greenyellow;
+    transition: width .35s ease-in-out
+}
+::placeholder {
+    mix-blend-mode: difference;    
+    opacity: 0.5;
+    font-family: Courier;
+}
+  
+
+
+/*button style*/
+.btn{
+    width: 200px;
+    height: 40px;
+    border-color: yellowgreen;
+    background: transparent;
+    border-radius: 20px;
+    font-family: Courier ;
+}
+
+button:hover{
+    transition: .35s ease-in-out
+}
