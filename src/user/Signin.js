@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Base from "../core/Base"
 import "./styles.css"
 import { Link , Redirect} from "react-router-dom";
-import { authenticate, isAuthenticated, signin } from "../auth/authHelper";
+import { authenticate, isAuthenticated, signin, isSignedin } from "../auth/authHelper";
 
 
-const Signin = () =>{
+const Signin = ({history}) =>{
 
     const [values, setValues] = useState({
         email:"",
@@ -45,7 +45,6 @@ const Signin = () =>{
     }
     const {user} = isAuthenticated();
 
-
     //perform a redirect to dashboard
     const reDirect = () =>{
         if(redirect){
@@ -55,6 +54,12 @@ const Signin = () =>{
             else{
                 return <Redirect to="admin/dashboard" />
             }
+        }
+    }
+    //checking if user already signed in
+    const issignin = () =>{
+        if(isSignedin()){
+            return history.push("/")
         }
     }
 
@@ -99,9 +104,10 @@ const Signin = () =>{
 
     return(
         
-        <Base className="row mx-auto" title="Signin to your account">
+        <Base className="row mx-auto" title="Signin to your account" onLoad= {issignin()}>
         <div className="col-6 mx-auto">
             {signinForm()}
+            {reDirect()}
         </div>
         <div className="col-6 mx-auto">
             {signupbtn()}

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Base from "../core/Base"
 import "./styles.css"
 import { Link , Redirect} from "react-router-dom";
-import { signup } from "../auth/authHelper";
+import { signup, isSignedin } from "../auth/authHelper";
 
 
-const Signup = () =>{
+const Signup = ({history}) =>{
     const [values,setValues] = useState({
         name:"",
         email:"",
@@ -39,6 +39,13 @@ const Signup = () =>{
         }).catch(error =>{
             console.log(error)
         });
+    }
+
+    //checking if user already signed in
+    const issignin = () =>{
+        if(isSignedin()){
+            return history.push("/")
+        }
     }
 
     const signupForm= () =>(
@@ -87,10 +94,9 @@ const Signup = () =>{
         )
     }
 
-    
 
     return(
-        <Base className="row mx-auto" title="Signup to new account">
+        <Base className="row mx-auto" title="Signup to new account" onLoad= {issignin()}>
             <div className="col-6 mx-auto">
                 {signupForm()}
                 

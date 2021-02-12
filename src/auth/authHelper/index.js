@@ -58,7 +58,19 @@ export const isAuthenticated = () =>{
         return false
     }
     if (localStorage.getItem("jwt")){
-        return localStorage.getItem("jwt")
+        return (JSON.parse(localStorage.getItem("jwt")));
+    }
+    else{
+        return false
+    }
+}
+
+export const isSignedin = () =>{
+    if (typeof window === "undefined"){
+        return false
+    }
+    if (localStorage.getItem("jwt")){
+        return true
     }
     else{
         return false
