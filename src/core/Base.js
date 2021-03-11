@@ -16,7 +16,7 @@ const Base = ({
         <div className="container-fluid">
             <div className=" jumbotron text-light text-center">
                 <h2 className="display-4 text-dark">{title}</h2>
-                <p className="text-sm lead">{description}</p>
+                <p className="text-sm lead text-dark">{description}</p>
             </div>
             <div className={className}>
                 {children}

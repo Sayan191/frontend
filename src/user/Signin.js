@@ -86,10 +86,11 @@ const Signin = ({history}) =>{
                         placeholder="Password"
                         value={password} />
                 </div>
-                <button onClick={onSubmit} className="btn btn-outline-success btn-"><p>Login</p></button>
+                <button onClick={onSubmit} className="btn btn-outline-success"><p>Login</p></button>
             </form>
         </div>
     )
+    
     const signupbtn = () =>{
         
         return(

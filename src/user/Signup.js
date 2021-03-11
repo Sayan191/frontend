@@ -10,11 +10,12 @@ const Signup = ({history}) =>{
         name:"",
         email:"",
         password:"",
+        phone:"",
         error:"",
         success:false
     })
 
-    const {name,email,password,error,success} = values
+    const {name,email,password,phone,error,success} = values
 
     const handleChange = name => events=>{
         setValues({...values, error:false, [name]: events.target.value})
@@ -23,7 +24,7 @@ const Signup = ({history}) =>{
     const onSubmit = e =>{
         e.preventDefault();
         setValues({...values, error:""})
-        signup({name,email,password}).then(data =>{
+        signup({name,email,password,phone}).then(data =>{
             if(data.error){
                 setValues({...values,error:data.error,success:false})
             }
@@ -32,6 +33,7 @@ const Signup = ({history}) =>{
                     name:"",
                     email:"",
                     password:"",
+                    phone:"",
                     error:"",
                     success:true
                 })
@@ -70,6 +72,13 @@ const Signup = ({history}) =>{
                         type="text" 
                         placeholder="Name"
                         value={name} />
+                </div>
+                <div className="input">
+                    <input
+                        onChange={handleChange("phone")} 
+                        type="text" 
+                        placeholder="Mobile Number"
+                        value={phone} />
                 </div>
                 <div className="input">
                     <input
