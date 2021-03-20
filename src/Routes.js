@@ -9,8 +9,8 @@ import AdminDashboard from "./user/AdminDashboard"
 import Signin from "./user/Signin"
 import Signup from "./user/Signup"
 import UserDashboard from "./user/UserDashboard"
-
-
+import ManageCategory from "./admin/ManageCategory";
+import ManageProduct from "./admin/ManageProducts"
 
 const Routes = () =>{
     return(
@@ -23,6 +23,8 @@ const Routes = () =>{
                 <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
                 <AdminRoute path="/admin/create/category" exact component={CreateCategory}/>
                 <AdminRoute path="/admin/create/product" exact component={CreateProduct}/>
+                <AdminRoute path="/admin/manage/categories" exact component={ManageCategory}/>
+                <AdminRoute path="/admin/manage/products" exact component={ManageProduct}/>
             </Switch>
         </Router>
     )

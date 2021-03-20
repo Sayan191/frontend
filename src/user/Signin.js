@@ -8,8 +8,8 @@ import { authenticate, isAuthenticated, signin, isSignedin } from "../auth/authH
 const Signin = ({history}) =>{
 
     const [values, setValues] = useState({
-        email:"",
-        password:"",
+        email:"sayan.hackerone@gmail.com",
+        password:"1234567",
         error:"",
         loading:false,
         redirect:false

@@ -66,6 +66,7 @@ const CreateProduct = () =>{
               price:"", 
               image:"",
               condition:"",
+              category: "",
               createdproduct: data.name,
               loading:false,
               success:true
