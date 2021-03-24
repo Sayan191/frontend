@@ -21,7 +21,7 @@ const CreateCategory = () =>{
         setSuccess(false)
         AddCategory(user._id,token,{year})
             .then( data =>{
-                if(data == null || data.error){
+                if(data == null || data.Error){
                     setError(true)
                 }
                 else if(data.err){

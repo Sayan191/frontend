@@ -1,5 +1,6 @@
 import {API} from "../../backend"
 
+//CATEGORY
 //create category
 export const AddCategory = (userId,token,year) =>{
     return fetch(`${API}/create/category/${userId}`,{
@@ -45,6 +46,35 @@ export const deleteCategory =(userId,token,categoryId) =>{
     }).catch(err=> console.log(err))
 }
 
+//getting a category
+export const getaCategory = (categoryId) =>{
+    return fetch(`${API}/category/${categoryId}`,{
+        method:"GET",
+        headers:{
+            Accept: "application/json",
+            "Content-Type" : "application/json",
+        }
+    }).then(response=>{
+        return response.json()
+    }).catch(err=>console.log(err))
+}
+
+//updating a category
+export const updateCate=(categoryId,userId,token,category)=>{
+    return fetch(`${API}/manage/category/${userId}/${categoryId}`,{
+        method:"PUT",
+        headers:{
+            Accept: "application/json",
+            "Content-Type" : "application/json",
+            Authorization : `Bearer ${token}`
+        },
+        body:JSON.stringify(category)
+    }).then(response=>{
+        return response.json()
+    }).catch(err=>console.log(err))
+}
+
+//PRODUCTS
 //creating products
 export const AddProduct = (userId,token,formData) =>{
     return fetch(`${API}/create/product/${userId}`,{
