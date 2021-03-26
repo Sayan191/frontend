@@ -2,14 +2,14 @@ import React,{useEffect,useState} from "react";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../auth/authHelper/index";
 import Base from "../core/Base"
-import { allCategory,deleteProd } from "./adminHelper";
+import { allProduct,deleteProd } from "./adminHelper";
 
 const ManageProduct = () =>{
     const [products, setProducts] =useState([]);
     const {user, token} = isAuthenticated();
 
     const preload = () =>{
-        allCategory().then(data=>{
+        allProduct().then(data=>{
             if(data.error){
                 console.log(data.error);
               }else{

@@ -1,8 +1,7 @@
 import React from "react"
 import "../styles.css"
 import Menu from "./Menu"
-
-
+import PageLoader from "./Loader"
 
 const Base = ({
     title="e-Stationary",
@@ -10,7 +9,6 @@ const Base = ({
     className=" py-4",
     children=""
 }) =>(
-    
     <div>
         <Menu />
         <div className="container-fluid">
@@ -29,12 +27,11 @@ const Base = ({
             </div>
             <div className="container">
                 <span className="text-muted">
-                    <span className="text-white">ICES</span> 
+                    <span className="text-white">ICES</span>
                 </span>
             </div>
-        </footer>  
+        </footer>
     </div>
-
 )
 
 export default Base;

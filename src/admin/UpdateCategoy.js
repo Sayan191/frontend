@@ -63,7 +63,7 @@ const UpdateCategory = ({match, history}) =>{
     const successMsg = () =>{
         if (success){ 
             return (
-                <h4 className="text-success lead">Category Updated  Successfully... Redirect back..</h4>
+                <h4 className="text-success lead">Category Updated  Successfully... Redirecting...</h4>
             )
             
         }
