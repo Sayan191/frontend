@@ -38,7 +38,7 @@ const Cart = () =>{
         <Base description ="Items in your Cart" title="Cart Page">
             <div className="row text-center">
                 <div className="col-8 mx-auto">{products.length > 0 ? loadAllProduct(products) : <h3>No products in the cart</h3>}</div>
-                <div className="col-4"><h2 className="lead"><u>Payment will added soon..</u></h2></div>
+                <div className="col-4"><h2 className="lead"><u>Payment method will added soon..</u></h2></div>
             </div>
         </Base>
     )
