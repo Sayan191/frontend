@@ -30,7 +30,7 @@ const Products = () =>{
         <Base title="Products around" >
             <div className="row">
                 {
-                    products.map((product, index)=> {
+                    products && products.map((product, index)=> {
                         return(
                             <div key={index} className="col-4 mb-4">
                                 <Card product ={product}/>
