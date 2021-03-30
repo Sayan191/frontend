@@ -10,6 +10,7 @@ const Base = ({
     children=""
 }) =>(
     <div>
+        <nav className="navbar-brand text-center mb-0 h1">ICES</nav>
         <Menu />
         <div className="container-fluid">
             <div className=" jumbotron text-light text-center">

@@ -4,7 +4,7 @@ import CreateCategory from "./admin/CreateCategory"
 import CreateProduct from "./admin/CreateProduct"
 import AdminRoute from "./auth/authHelper/AdminRoute"
 import PrivateRoute from "./auth/authHelper/PrivateRoute"
-import HOme from "./core/HOme"
+import Home from "./core/Home"
 import AdminDashboard from "./user/AdminDashboard"
 import Signin from "./user/Signin"
 import Signup from "./user/Signup"
@@ -13,16 +13,19 @@ import ManageCategory from "./admin/ManageCategory";
 import ManageProduct from "./admin/ManageProducts"
 import UpdateCategory from "./admin/UpdateCategoy"
 import UpdateProduct from "./admin/UpdateProduct"
-
+import Products from "./core/Products"
+import Cart from "./core/Cart"
 
 
 const Routes = () =>{
     return(
         <Router>
             <Switch>
-                <Route path="/" exact component={HOme}/>
+                <Route path="/" exact component={Home}/>
                 <Route path="/signin" exact component={Signin}/>
                 <Route path="/signup" exact component={Signup}/>
+                <Route path="/products" exact component={Products}/>
+                <Route path="/cart" exact component={Cart}/>
                 <PrivateRoute path="/user/dashboard" exact component={UserDashboard}/>
                 <AdminRoute path="/admin/dashboard" exact component={AdminDashboard}/>
                 <AdminRoute path="/admin/create/category" exact component={CreateCategory}/>
