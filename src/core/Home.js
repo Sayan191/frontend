@@ -3,7 +3,6 @@ import Base from "./Base"
 
 const Home = () =>{
 
-
     return(
         <Base title="Welcome" description="Still in Costruction.. Please go to products page..">
             <div className="row text-dark ">
