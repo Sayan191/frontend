@@ -57,8 +57,8 @@ const AdminDashboard = () =>{
     }
 
     return(
-        <Base title="Admin Dashboard" description= "Manage Your Account" className="container p-4 bg-success">
-            <div className="row">
+        <Base title="Admin Dashboard" description= "Manage Your Account" className="container p-4 mb-4 bg-success border border-rounded border-dark">
+            <div className="row ">
                 <div className="col-3">{AdminLeftSide()}</div>
                 <div className="col-9">{AdminRightSide()}</div>
             </div>
