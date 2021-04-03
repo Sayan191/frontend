@@ -14,9 +14,6 @@ const AdminDashboard = () =>{
                 <h4 className="card-header bg-dark text-white lead">Admin Bar</h4>
                 
                 <ul className="list-group list-unstyled">
-                <li className="list-group-items ">
-                        <Link to="/admin/user/update" className="nav-link text-succeess"> Update User Details </Link>
-                    </li>
                     <li className="list-group-items ">
                         <Link to="/admin/create/category" className="nav-link text-succeess"> Create Category </Link>
                     </li>
@@ -30,7 +27,10 @@ const AdminDashboard = () =>{
                         <Link to="/admin/manage/products" className="nav-link text-succeess"> Manage Products </Link>
                     </li>
                     <li className="list-group-items">
-                        <Link to="/admin/orders" className="nav-link text-succeess"> Manage Orders </Link>
+                        <Link to="/admin/all/orders" className="nav-link text-succeess"> Manage Orders </Link>
+                    </li>
+                    <li className="list-group-items">
+                        <Link to="/admin/orders" className="nav-link text-succeess"> My Orders </Link>
                     </li>
                 </ul>
             </div>

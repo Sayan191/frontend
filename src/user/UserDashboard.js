@@ -14,9 +14,6 @@ const UserDashboard = () =>{
                 <h4 className="card-header bg-dark text-white lead">User </h4>
                 <div>
                 <ul className="list-group list-unstyled">
-                    <li className="list-group-items ">
-                        <Link to="/user/update" className="nav-link text-succeess"> Update user </Link>
-                    </li>
                     <li className="list-group-items">
                         <Link to="/user/orders" className="nav-link text-succeess"> My orders </Link>
                     </li>

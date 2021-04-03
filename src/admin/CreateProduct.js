@@ -138,7 +138,7 @@ const CreateProduct = () =>{
           className="form-control"
           placeholder="Category"
         >
-          <option>Select</option>
+          <option>Select Category</option>
           {categories &&
             categories.map((cate, index) => (
               <option key={index} value={cate._id}>
