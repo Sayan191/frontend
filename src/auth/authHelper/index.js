@@ -76,3 +76,10 @@ export const isSignedin = () =>{
         return false
     }
 }
+
+/*export const reAuthenticate = (data,next)=>{
+    if(typeof window !== "undefined"){
+        localStorage.setItem("jwt",JSON.stringify(data))
+        next()
+    }
+}*/

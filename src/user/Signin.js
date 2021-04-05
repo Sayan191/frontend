@@ -8,8 +8,8 @@ import { authenticate, isAuthenticated, signin, isSignedin } from "../auth/authH
 const Signin = ({history}) =>{
 
     const [values, setValues] = useState({
-        email:"",
-        password:"",
+        email:"sayan.hackerone@gmail.com",
+        password:"123456789",
         error:"",
         loading:false,
         redirect:false
@@ -24,11 +24,13 @@ const Signin = ({history}) =>{
         e.preventDefault();
         setValues({...values, error:false})
         signin({email,password}).then(data =>{
+            console.log(data)
             if(data.error){
                 setValues({...values,error:data.error,})
             }
             else{
                 authenticate(data, () =>{
+                    
                     setValues({
                         email:"",
                         password:"",

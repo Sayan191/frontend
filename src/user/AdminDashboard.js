@@ -6,7 +6,7 @@ import Base from "../core/Base"
 
 const AdminDashboard = () =>{
     
-    const { user: {name , email, role} } = isAuthenticated();
+    const { user: {name , email, role, _id} } = isAuthenticated();
     
     const AdminLeftSide = () =>{
         return(
@@ -14,6 +14,9 @@ const AdminDashboard = () =>{
                 <h4 className="card-header bg-dark text-white lead">Admin Bar</h4>
                 
                 <ul className="list-group list-unstyled">
+                <li className="list-group-items ">
+                        <Link to={`/user/update/${_id}`} className="nav-link text-succeess"> Update user </Link>
+                    </li>
                     <li className="list-group-items ">
                         <Link to="/admin/create/category" className="nav-link text-succeess"> Create Category </Link>
                     </li>

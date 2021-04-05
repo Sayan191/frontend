@@ -6,7 +6,7 @@ import Base from "../core/Base";
 
 const UserDashboard = () =>{
     
-    const {user: {name,email} } = isAuthenticated();
+    const {user: {name,email,_id} } = isAuthenticated();
 
     const userLeftSide = () =>{
         return(
@@ -14,14 +14,14 @@ const UserDashboard = () =>{
                 <h4 className="card-header bg-dark text-white lead">User </h4>
                 <div>
                 <ul className="list-group list-unstyled">
+                    <li className="list-group-items ">
+                        <Link to={`/user/update/${_id}`} className="nav-link text-succeess"> Update user </Link>
+                    </li>
                     <li className="list-group-items">
                         <Link to="/user/orders" className="nav-link text-succeess"> My orders </Link>
                     </li>
                     <li className="list-group-items">
                         <Link to="/user/chats" className="nav-link text-succeess"> My chats </Link>
-                    </li>
-                    <li className="list-group-items">
-                        <Link to="/user/notification" className="nav-link text-succeess"> My notifications </Link>
                     </li>
                 </ul>
                 </div>
