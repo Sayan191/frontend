@@ -1,8 +1,9 @@
 import React ,{useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import { reAuthenticate, isAuthenticated } from "../auth/authHelper";
+import {isAuthenticated, signout } from "../auth/authHelper";
 import Base from "../core/Base";
 import { getUser, updateUser } from "./userDetails/userDetailsHelper";
+
 
 const UserDetails = ({match,history}) =>{
     const {user,token} = isAuthenticated();
@@ -44,18 +45,14 @@ const UserDetails = ({match,history}) =>{
         setValues({...values, error:"", [name]: events.target.value})
     }
 
-    const redirect = () => {
-        if(user.role === 1){
-            setTimeout(() => { 
-                history.push('/admin/dashboard');
-            }, 3000)
-        }
-        else if(user.rle === 0){
-            setTimeout(() => { 
-                history.push('/user/dashboard');
-            }, 3000)
-        }
+    const redirect = () => {        
+      setTimeout(() => { 
+        signout(()=>{
+          history.push("/")
+        })
+      }, 3000)
     }
+
 
     const onSubmit =e =>{
         e.preventDefault();
