@@ -1,21 +1,20 @@
 import React from "react"
 import "../styles.css"
 import Menu from "./Menu"
-import PageLoader from "./Loader"
 
 const Base = ({
     title="e-Stationary",
     description="",
-    className=" py-4",
+    className=" py-4 text-success",
     children=""
 }) =>(
     <div>
-        <nav className="navbar-brand text-center mb-0 h1">ICES</nav>
+        <nav className="navbar-brand text-light text-center mb-0 h1">ICES</nav>
         <Menu />
         <div className="container-fluid">
-            <div className=" jumbotron text-light text-center">
-                <h2 className="display-4 text-dark">{title}</h2>
-                <p className="text-sm lead text-dark">{description}</p>
+            <div className=" jumbotron text-danger text-center">
+                <h2 className="display-4">{title}</h2>
+                <p className="text-sm lead">{description}</p>
             </div>
             <div className={className}>
                 {children}
