@@ -48,7 +48,7 @@ const UserDashboard = () =>{
         )
     }
     return (
-        <Base title="User Dashboard">
+        <Base title="User Dashboard" description="Manage Your Account" >
             <div className="row">
                 <div className="col-3">{userLeftSide()}</div>
                 <div className="col-9">{userRightSide()}</div>
