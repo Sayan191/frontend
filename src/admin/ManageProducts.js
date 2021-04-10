@@ -37,8 +37,8 @@ const ManageProduct = () =>{
             <div className="row">
                 
                 <div className="col-12">
-                    {!products.length && (<h2 className="text-center text-warning py-4">No products found</h2>)}
-                    {products.length>0 && (<h2 className="text-center text-warning py-4">Total {products.length} products</h2>)}
+                    {!products.length && (<h2 className="text-center text-dark py-4">No products found</h2>)}
+                    {products.length>0 && (<h2 className="text-center text-dark py-4">Total {products.length} products</h2>)}
                     {
                         products.map( (product, index) => {
                             return(
@@ -51,11 +51,11 @@ const ManageProduct = () =>{
                                         <Link
                                             className="btn btn-success"
                                             to={`/admin/product/update/${product._id}`} >
-                                            <span className="text-warning">Update</span>
+                                            <span className="text-dark">Update</span>
                                         </Link>
                                         </div>
                                         <div className="col-4">
-                                            <button onClick={() => {deleteProduct(product._id)}} className="btn btn-danger text-light">
+                                            <button onClick={() => {deleteProduct(product._id)}} className="btn btn-danger text-dark">
                                                 Delete
                                             </button>
                                         </div>

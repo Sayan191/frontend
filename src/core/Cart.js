@@ -18,18 +18,20 @@ const Cart = () =>{
         return(
             <div >
                 <h2 className ="mb-5"><u>{products.length} products in your Cart</u></h2>
-                {products.map((product,index) => {
-                    return(
-                        <Card 
-                        key = {index}
-                        product={product}
-                        addtoCart= {false}
-                        removefromCart={true}
-                        setReload={setReload}
-                        reload={reload}
-                        />
-                    )
-                })}
+                <div className="grid grid-cols-2 ">
+                    {products.map((product,index) => {
+                        return(
+                            <Card 
+                            key = {index}
+                            product={product}
+                            addtoCart= {false}
+                            removefromCart={true}
+                            setReload={setReload}
+                            reload={reload}
+                            />
+                        )
+                    })}
+                </div>
             </div>
         )
     }

@@ -5,14 +5,14 @@ import Menu from "./Menu"
 const Base = ({
     title="e-Stationary",
     description="",
-    className=" py-4 text-success",
+    className=" py-4",
     children=""
 }) =>(
     <div>
-        <nav className="navbar-brand text-light text-center mb-0 h1">ICES</nav>
+        <nav className="navbar-brand text-dark text-center mb-0 h1">ICES</nav>
         <Menu />
         <div className="container-fluid">
-            <div className=" jumbotron text-danger text-center">
+            <div className=" jumbotron text-dark text-center">
                 <h2 className="display-4">{title}</h2>
                 <p className="text-sm lead">{description}</p>
             </div>
@@ -21,7 +21,7 @@ const Base = ({
             </div>
         </div>
         <footer className="mt-auto footer ">
-            <div className="container-fluid bg-success text-white text-center py-3">
+            <div className="container-fluid bg-success dark text-center py-3">
                 <h4 className="lead">Feel free to ask any query</h4>
                 <button className="btn btn-warning btn-md py-1">Contact Us</button>
             </div>
