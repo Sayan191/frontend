@@ -1,19 +1,26 @@
-
 .row1{
+    border-radius: 15px;
+    background-image: url("../1.jpg");
     height: 400px;
     width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-
-
+#col1{
+    opacity: 0.6;
+}
+#col2{
+    opacity: 0.7;
+}
 
 .container {
     display: block;
     margin: auto;
     
 }
+
 .form{
     margin: auto;
     width: 500px;
@@ -27,38 +34,40 @@ h1,h3{
     color: white;
     font-family: Courier;
     font-weight: bold;
-    mix-blend-mode: difference;
+    
 }
+
 h4{
     color: white;
     font-family: Courier;
-    mix-blend-mode: difference;
+    
 }
 
 /* input style*/
 .input{
     padding-bottom: 10px;
 }
+
 input{
     width: 300px;
     height: 50px;
     border-radius: 5px;
 }
+
 input[type=text]:focus,[type="password"]:focus {
     width: 350px;
 }
+
 input[type="text"],[type="password"]
 {   
     background: transparent;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-color: greenyellow;
     transition: width .35s ease-in-out
 }
 ::placeholder {
-    mix-blend-mode: difference;    
-    opacity: 0.5;
+    opacity: 0.8;
     font-family: Courier;
 }
   

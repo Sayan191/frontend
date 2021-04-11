@@ -27,17 +27,19 @@ const Products = () =>{
     }, []);
     
     return(
-        <Base title="Products around" className="row">
-            <div className=" grid grid-cols-3 gap-3">
-                    {
-                        products && products.map((product, index)=> {
-                            return(
-                                <div key={index} >
-                                    <Card product ={product}/>
-                                </div>
-                            )
-                        })  
-                    }
+        <Base title="Products around" className="mb-2">
+            <div className="row">
+                <div className=" grid grid-cols-3 gap-3">
+                        {
+                            products && products.map((product, index)=> {
+                                return(
+                                    <div key={index} >
+                                        <Card product ={product}/>
+                                    </div>
+                                )
+                            })  
+                        }
+                </div>
             </div>
         </Base>
     ) 

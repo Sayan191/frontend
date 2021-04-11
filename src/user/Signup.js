@@ -51,7 +51,7 @@ const Signup = ({history}) =>{
     }
 
     const signupForm= () =>(
-        <div className="row1">
+        <div className="row1" id="col1">
             <form>
                 <div className="alert alert-success" style={{display: success ? "" : "none"}}>
                     Account Created. Click here to <Link to="/signin" >Login</Link>
@@ -64,6 +64,7 @@ const Signup = ({history}) =>{
                         onChange={handleChange("email")}
                         type="text" 
                         placeholder="Email"
+                        className="border-b-2 placeholder-black"
                         value={email} />
                 </div>
                 <div className="input">
@@ -71,6 +72,7 @@ const Signup = ({history}) =>{
                         onChange={handleChange("name")} 
                         type="text" 
                         placeholder="Name"
+                        className="border-b-2 placeholder-black"
                         value={name} />
                 </div>
                 <div className="input">
@@ -78,6 +80,7 @@ const Signup = ({history}) =>{
                         onChange={handleChange("phone")} 
                         type="text" 
                         placeholder="Mobile Number"
+                        className="border-b-2 placeholder-black"
                         value={phone} />
                 </div>
                 <div className="input">
@@ -85,6 +88,7 @@ const Signup = ({history}) =>{
                         onChange={handleChange("password")} 
                         type="password" 
                         placeholder="Password"
+                        className="border-b-2 placeholder-black"
                         value={password} />
                 </div>
                 <button onClick={onSubmit} className="btn btn-outline-success btn-"><p>Signup</p></button>
@@ -94,7 +98,7 @@ const Signup = ({history}) =>{
 
     const loginbtn = () =>{ 
         return(
-            <div className="row1">
+            <div className="row1" id="col2">
                 <form>
                     <h3>Already have an account!</h3>
                     <Link className="btn btn-outline-success " to="/signin">Signin</Link>
@@ -105,7 +109,7 @@ const Signup = ({history}) =>{
 
 
     return(
-        <Base className="row mx-auto" title="Signup to new account" onLoad= {issignin()}>
+        <Base className="row mx-auto mt-3" title="Signup to new account" onLoad= {issignin()}>
             <div className="col-6 mx-auto">
                 {signupForm()}
                 

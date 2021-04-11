@@ -1,8 +1,6 @@
-
-
 body{
   margin: 0;
-  background-image: url("1.jpg");
+  background-image: url("3.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -27,8 +25,17 @@ footer{
   font-weight:bolder;
 }
 
+.nav .nav-link{
+  transition: 0.5s;
+  transition-timing-function: ease-in;
+  border-radius:10px ;
+}
+
+.nav .nav-link:hover {
+  background:rgb(255, 73, 73);
+  text-decoration: none;
+}
 
 .nav .nav-link:focus {
-    background-color:#800691;
-    text-decoration: none;
+  text-decoration: none;
 }

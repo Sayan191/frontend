@@ -42,7 +42,7 @@ const AdminDashboard = () =>{
     
     const AdminRightSide = () => {
         return(
-            <div className="card mb-4 " >
+            <div className="card mb-4 ">
                 <h4 className="card-header bg-dark text-white lead">Info Panel</h4>
                 <li className="list-group-item  bg-dark">
                 <span className="lead "><span className="badge badge-warning text-info">You are an Admin</span></span>

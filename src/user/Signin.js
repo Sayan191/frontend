@@ -66,9 +66,9 @@ const Signin = ({history}) =>{
     }
 
     const  signinForm = () => (
-        <div className="row1 ">
+        <div className="row1" id="col1">
             <form>
-                <div className="alert alert-success" style={{display: loading ? "" : "none"}}>
+                <div className="alert alert-white" style={{display: loading ? "" : "none"}}>
                     Logged in Successfully
                 </div>
                 <div className="alert alert-warning" style={{display: error ? "" : "none"}}>
@@ -79,6 +79,7 @@ const Signin = ({history}) =>{
                         onChange ={handleChange("email")}
                         type="text" 
                         placeholder="Email"
+                        className="border-b-2 placeholder-black"
                         value={email} />
                 </div>
                 <div className="input">
@@ -86,6 +87,7 @@ const Signin = ({history}) =>{
                         onChange ={handleChange("password")}
                         type="password" 
                         placeholder="Password"
+                        className="border-b-2 placeholder-black"
                         value={password} />
                 </div>
                 <button onClick={onSubmit} className="btn btn-outline-success"><p>Login</p></button>
@@ -96,7 +98,7 @@ const Signin = ({history}) =>{
     const signupbtn = () =>{
         
         return(
-            <div className="row1">
+            <div className="row1" id="col2">
                 <form >
                     <h3 >Don't have an account!</h3>
                     <Link className="btn btn-outline-success " to="/signup">Signup</Link>
@@ -107,7 +109,7 @@ const Signin = ({history}) =>{
 
     return(
         
-        <Base className="row mx-auto" title="Signin to your account" onLoad= {issignin()}>
+        <Base className="row mx-auto mt-3" title="Signin to your account" onLoad= {issignin()}>
         <div className="col-6 mx-auto">
             {signinForm()}
             {reDirect()}

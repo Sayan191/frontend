@@ -17,7 +17,7 @@ const Cart = () =>{
     const loadAllProduct = (products) =>{
         return(
             <div >
-                <h2 className ="mb-5"><u>{products.length} products in your Cart</u></h2>
+                <h2 className ="mb-5 text-light "><u>{products.length} products in your Cart</u></h2>
                 <div className="grid grid-cols-2 ">
                     {products.map((product,index) => {
                         return(
@@ -37,11 +37,11 @@ const Cart = () =>{
     }
 
     return(
-        <Base description ="Items in your Cart" title="Cart Page">
-            <div className="row text-center">
-                {products && products.length>0 && (<div className="col-8 mx-auto">{loadAllProduct(products)}</div>)}
-                {!products && (<div className="col-8 mx-auto"><h3>No products in the cart</h3></div>)}
-                <div className="col-4"><h2 className="lead"><u>Payment method will added soon..</u></h2></div>
+        <Base description ="Items in your Cart" title="Cart Page" className="mb-2">
+            <div className="row text-center mt-4">
+                {products && products.length>0 && (<div className="col-8 mx-auto ">{loadAllProduct(products)}</div>)}
+                {!products && (<div className="col-8 mx-auto text-light display-4"><h3>No products in the cart</h3></div>)}
+                <div className="col-4"><h2 className="lead text-light"><u>Payment method will added soon..</u></h2></div>
             </div>
         </Base>
     )
