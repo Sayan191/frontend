@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+}
+
 #home1{
     background-image: url("../1.jpg");
+}
+
+img{
+    height: 200px;
+    width: 150px;
+}
+
+#about{
+    background: transparent;
+}
+
+#aboutMe{
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+}
+
+h6{
+    font-size: 50px;
 }

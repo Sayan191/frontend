@@ -1,6 +1,9 @@
 import { React, useState } from "react";
 import Base from "./Base"
 import "../styles/home.css"
+import img1 from "../assets/naruto.jfif"
+import img2 from "../assets/jinga.jfif"
+
 
 const Home = ({history}) =>{
 
@@ -49,6 +52,57 @@ const Home = ({history}) =>{
                 <div class="p-5 text-2xl text-white bg-purple-600 bg-opacity-50 rounded-xl cursor-pointer font-mono transition duration-500 ease-in-out hover:bg-purple-400" onClick={()=>(history.push("/products"))}>
                     Explore Products
                 </div>
+            </div>
+
+            {/* about Us card */}
+            <div className=" about p-4 border-bottom">
+                <h6 className="aboutMe display-6 text-bold text-gray-900 text-light p-4 text-right">Developers</h6>
+            </div>
+            <div className="flex space-x-4 p-4">
+                <div className="flex-1 container border rounded bg-light p-2 md:inline-flex">
+                    <img src={img2} className="float-left border border-dark rounded p-2 mr-4"/>
+                    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+                        <blockquote>
+                            <p class="text-lg font-semibold">
+                                “Opportunities doesn't come up of its own.
+                                We got to ours make ours.”
+                            </p>
+                        </blockquote>
+                        <figcaption class="font-medium">
+                            <div class="text-cyan-600">
+                                    Sayan Talukdar
+                            </div>
+                            <div class="text-gray-500">
+                                Full Stack Developer, Durgapur
+                            </div>
+                            <div class="text-gray-500">
+                                <span className="text-cyan-500">eMail:</span>sayantalukdar30@gmail.com 
+                            </div>
+                        </figcaption>
+                    </div>
+                </div>
+                <div className="flex-1 container border rounded bg-light p-2 md:inline-flex">
+                    <img src={img1} className="float-right border border-dark rounded p-2 ml-4"/>
+                    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+                        <blockquote>
+                            <p class="text-lg font-semibold">
+                                “How can we evolve when regulations is 
+                                all we know?”
+                            </p>
+                        </blockquote>
+                        <figcaption class="font-medium">
+                            <div class="text-cyan-600">
+                                Sourav Kumar Ojha
+                            </div>
+                            <div class="text-gray-500">
+                                Full Stack Developer, Asansol
+                            </div>
+                            <div class="text-gray-500">
+                                <span className="text-cyan-500">eMail:</span>sojha@gmail.com 
+                            </div>
+                        </figcaption>
+                    </div>
+                </div>    
             </div>
         </Base>
     ) 
