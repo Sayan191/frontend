@@ -63,7 +63,9 @@ const UpdateCategory = ({match, history}) =>{
     const successMsg = () =>{
         if (success){ 
             return (
-                <h4 className="text-success lead">Category Updated  Successfully... Redirecting...</h4>
+                <div className="alert alert-success mt-3">
+                    <h4 className="text-dark lead">Category Updated  Successfully... Redirecting...</h4>
+                </div>
             )
             
         }
@@ -72,7 +74,7 @@ const UpdateCategory = ({match, history}) =>{
     //if not updated func
     const warningMsg = () =>{
         if (error){
-            return <h4 className="text-warniing lead">Unable to Update Category</h4>
+            return <h4 className="text-warning lead">Unable to Update Category</h4>
         }
     }
 
@@ -81,7 +83,7 @@ const UpdateCategory = ({match, history}) =>{
         return(
             <form>
                 <div className="form-group">
-                    <h3 className="lead card-header mb-3">Update Category Year</h3>
+                    <h3 className="lead card-header mb-3 text-dark">Update Category Year</h3>
                     <input onChange={handleChange} value={year}className="form-control my-3 mb-3" type="text" autoFocus required/>
                     <button onClick={onSubmit} className="btn btn-outline-info mb-3 text-dark">Update</button> 
                 </div>

@@ -97,7 +97,7 @@ const UpdateProduct = ({match,history}) =>{
     const successMsg = () =>{
         return(
           <div className="alert alert-success mt-3" style={{ display: updatedproduct ? "" : "none" }}>
-              <h4>Product updated successfully</h4>
+              <h4 className="text-dark">Product updated successfully</h4>
           </div>
         )
     }
@@ -112,7 +112,7 @@ const UpdateProduct = ({match,history}) =>{
 
     const updateProductForm = () => (
         <form>
-          <div className="form-group my-1">
+          <div className="form-group my-1 text-light">
             <input
               onChange={handleChange("name")}
               name="name"

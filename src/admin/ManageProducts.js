@@ -33,29 +33,29 @@ const ManageProduct = () =>{
             <Link className="btn btn-warning" to={`/admin/dashboard`}>
                 <span className="text-light">Admin Home</span>
             </Link>
-            <h2 className="mb-3 mt-2">All products:</h2>
+            <h2 className="mb-3 mt-2 text-light">All products:</h2>
             <div className="row">
                 
                 <div className="col-12">
-                    {!products.length && (<h2 className="text-center text-dark py-4">No products found</h2>)}
-                    {products.length>0 && (<h2 className="text-center text-dark py-4">Total {products.length} products</h2>)}
+                    {!products.length && (<h2 className="text-center text-light py-4">No products found</h2>)}
+                    {products.length>0 && (<h2 className="text-center text-light py-4">Total {products.length} products</h2>)}
                     {
                         products.map( (product, index) => {
                             return(
                                 <div className="border border-dark mb-2 ">
-                                    <div key ={index} className="row text-center mb-2 mt-2">
+                                    <div key ={index} className="row text-center mb-2 mt-2 ">
                                         <div className="col-4">
-                                            <h3 className="text-left">{product.name}</h3>
+                                            <h3 className="text-center text-light">{product.name}</h3>
                                         </div>
                                         <div className="col-4">
                                         <Link
                                             className="btn btn-success"
                                             to={`/admin/product/update/${product._id}`} >
-                                            <span className="text-dark">Update</span>
+                                            <span className="text-light">Update</span>
                                         </Link>
                                         </div>
                                         <div className="col-4">
-                                            <button onClick={() => {deleteProduct(product._id)}} className="btn btn-danger text-dark">
+                                            <button onClick={() => {deleteProduct(product._id)}} className="btn btn-danger text-light">
                                                 Delete
                                             </button>
                                         </div>

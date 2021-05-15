@@ -1,12 +1,14 @@
 import React from "react"
 import "../styles.css"
 import Menu from "./Menu"
+const googleAdId = 'ca-pub-yourGoogleAdId'
 
 const Base = ({
     title="e-Stationary",
     description="",
     className=" py-4",
     children=""
+    
 }) =>(
     <div>
         <nav className="navbar-brand text-light text-center mb-0 h1">ICES</nav>
@@ -20,6 +22,7 @@ const Base = ({
                 {children}
             </div>
         </div>
+   
         <footer className="mt-4 footer ">
             <div className="container-fluid bg-success dark text-center py-3">
                 <h4 className="lead">Feel free to ask any query</h4>

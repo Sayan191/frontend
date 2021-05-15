@@ -55,7 +55,7 @@ const CreateCategory = () =>{
         return(
             <form>
                 <div className="form-group">
-                    <h3 className="lead card-header">Add Year wise Category<span className="text-muted">(in number)</span></h3>
+                    <h3 className="lead card-header text-dark">Add Year wise Category<span className="text-muted">(in number)</span></h3>
                     <input 
                         onChange={handleChange} 
                         value={year}
