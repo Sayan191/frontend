@@ -4,7 +4,32 @@
 }
 
 #home1{
-    background-image: url("../1.jpg");
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#home1 p{
+    
+    transition: opacity 1s ease-in;
+    opacity: 0;
+    height: 0;
+    
+}
+
+#home1:hover{
+    
+    overflow: hidden;
+    transition: all 0.45s;
+    transform: scale(1.1);
+}
+
+#home1:hover p{
+
+    opacity: 1;
+    height: auto;
+    color: white;
 }
 
 img{
@@ -21,6 +46,49 @@ img{
     font-size: 50px;
 }
 
+.heading{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+}
+
+
 h6{
     font-size: 50px;
+}
+
+.card1{    
+    background-image: url("../assets/ds.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card1:hover{
+    background-image: url("../assets/grey.jpg");
+    color: #ffffff;
+}
+
+
+.card2{
+    background-image: url("../assets/btc.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card2:hover{
+    background-image: url("../assets/grey.jpg");
+    color: #ffffff;
+}
+
+
+.card3{
+    background-image: url("../assets/bike.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card3:hover{
+    background-image: url("../assets/grey.jpg");
+    color: #ffffff;
+}
+
+
+#blog{
+
 }

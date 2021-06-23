@@ -1,7 +1,7 @@
 import React from "react"
 import "../styles.css"
 import Menu from "./Menu"
-const googleAdId = 'ca-pub-yourGoogleAdId'
+//const googleAdId = 'ca-pub-yourGoogleAdId'
 
 const Base = ({
     title="e-Stationary",
