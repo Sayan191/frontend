@@ -4,9 +4,14 @@ import "../styles/home.css"
 import "../styles.css"
 import img1 from "../assets/naruto.jfif"
 import img2 from "../assets/jinga.jfif"
+import { Redirect,Link } from "react-router-dom";
 
 
 const Home = ({history}) =>{
+
+    const redirect=()=>{
+        return <Redirect to="http://www.google.com"/>
+    }
 
     return(
         <Base title="">
@@ -27,7 +32,7 @@ const Home = ({history}) =>{
                         sapien. Maecenas in nulla at leo convallis consectetur id a sapien. Nulla
                         nec pulvinar nisi. 
                         <div className="container-fluid mt-2">
-                            <button className="btn btn-warning btn-md py-1">Learn More</button>
+                            <button className="btn btn-warning btn-md py-1" onClick={()=>(window.location.href="http://www.google.com") }>Learn More</button>
                         </div>
                     </p>
                     
@@ -41,7 +46,7 @@ const Home = ({history}) =>{
                         Nunc sed elit ac tellus tempor cursus. Suspendisse potenti. Vestibulum
                         varius rutrum nisl nec consequat. 
                         <div className="container-fluid mt-2">
-                            <button className="btn btn-warning btn-md py-1">Learn More</button>
+                            <button className="btn btn-warning btn-md py-1" onClick={()=>(window.location.href="http://www.google.com") }>Learn More</button>
                         </div>
                     </p>
                     
@@ -54,11 +59,11 @@ const Home = ({history}) =>{
                         dolor. In bibendum rhoncus purus vel rutrum. Nam vulputate imperdiet
                         fringilla. 
                         <div className="container-fluid mt-2">
-                            <button className="btn btn-warning btn-md py-1">Learn More</button>
+                            <button className="btn btn-warning btn-md py-1" onClick={()=>(window.location.href="http://www.google.com") }>Learn More</button>
                         </div>
-                    </p>
-                    
-                </div>                
+                    </p>    
+                </div>
+                <div className=" about p-4 mb-4"></div>                
             </div>
             <div class="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover">
                 <div class="p-5 text-2xl text-white bg-purple-600 bg-opacity-50 rounded-xl cursor-pointer font-mono transition duration-500 ease-in-out hover:bg-purple-400" onClick={()=>(history.push("/products"))}>
