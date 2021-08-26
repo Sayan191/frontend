@@ -98,28 +98,7 @@ const Home = ({history}) =>{
                         </figcaption>
                     </div>
                 </div>
-                <div className="flex-1 container border rounded bg-light p-2 md:inline-flex">
-                    <img src={img1} className="float-right border border-dark rounded p-2 ml-4"/>
-                    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-                        <blockquote>
-                            <p class="text-lg font-semibold">
-                                “How can we evolve when regulations is 
-                                all we know?”
-                            </p>
-                        </blockquote>
-                        <figcaption class="font-medium">
-                            <div class="text-cyan-600">
-                                Sourav Kumar Ojha
-                            </div>
-                            <div class="text-gray-500">
-                                Full Stack Developer, Asansol
-                            </div>
-                            <div class="text-gray-500">
-                                <span className="text-cyan-500">eMail:</span>sojha@gmail.com 
-                            </div>
-                        </figcaption>
-                    </div>
-                </div>    
+
             </div>
         </Base>
     ) 
